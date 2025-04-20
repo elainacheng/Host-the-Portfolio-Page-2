@@ -1,0 +1,144 @@
+<html>
+    <body>
+        <header>
+            <h1>Lesson 5: In-Class Lab 4</h1>
+            <p>This is just a page demonstration.</p>
+        </header>
+        <input type="button" value="Rent Comparison" onclick="rentComparison()"></br>
+        <input type="button" value="Rent Comparison2" onclick="rentComparison2(10000)"><br/>
+        <label for="rent">Monthly outside rent:</label>
+        <input type="text" id="rent" name="rent"> <br/>
+        <input type="button" value="Rent Comparison3" onclick="rentComparison3(10000)"><br/>
+        <p id="output"></p>
+        <input type="button" value="sumOfNumbers" onclick="sumOfNumbers()">
+        <p id="output2"></p>
+        <input type="button" value="sumOfNumbers2" onclick="sumOfNumbers2(2)">
+        <p id="output3"></p>        
+        <input type="button" value="Sum and Product (extra credit)" onclick="extra()"><br/>
+        <p id="output4"></p>
+        <p id="output5"></p>
+        <script>
+        /*
+        1. You want to determine the cheapest option for living expenses in your third year of college.
+        The university charges $7500 per year.
+        Ask the user to enter the monthly rent of a 12-month lease in an outside apartment.
+        Print the cheapest option.
+        */   
+
+        // call a function from a button
+        function rentComparison()
+        {
+            let universityCost = 7500;
+            let monthlyRent = parseFloat(prompt("Enter the monthly rent for an outside apartment:"));
+            let annualRent = monthlyRent * 12;
+            if (annualRent < universityCost) {
+            console.log("The cheaper option is renting outside at $" + annualRent + " per year.");
+            } else {
+            console.log("The cheaper option is staying at the university for $7500 per year.");
+            }
+        }
+
+        
+
+        function rentComparison2(universityCost)
+        {
+            //let universityCost = 7500;
+            let monthlyRent = parseFloat(prompt("Enter the monthly rent for an outside apartment:"));
+            let annualRent = monthlyRent * 12;
+            if (annualRent < universityCost) {
+            console.log("The cheaper option is renting outside at $" + annualRent + " per year.");
+            } else {
+            console.log("The cheaper option is staying at the university for $10000 per year.");
+            }
+        }
+
+        function rentComparison3(universityCost)
+        {
+            //let universityCost = 7500;
+            //let monthlyRent = parseFloat(prompt("Enter the monthly rent for an outside apartment:"));
+            let monthlyRent= document.getElementById("rent").value;
+            let annualRent = monthlyRent * 12;
+            if (annualRent < universityCost) {
+                let output=document.getElementById("output");
+                output.innerHTML="The cheaper option is renting outside at $" + annualRent + " per year.";
+            //console.log("The cheaper option is renting outside at $" + annualRent + " per year.");
+            } else {
+            //console.log("The cheaper option is staying at the university for $10000 per year.");
+                let output=document.getElementById("output");
+                output.innerHTML="The cheaper option is staying at the university for $10000 per year.";
+            }
+        }
+            /*
+
+            4. Create a Javascript function called "sumOfNumbers" to add up numbers entered by the user until the unser enters 0. Call the function from an HTML button.
+
+            */
+        function sumOfNumbers()
+        {
+            sum=0;
+           let number = parseInt(prompt("Enter a number: (0 to exit)"));
+           while(number!=0)
+           {
+             sum += number //sum=sum+number
+             number = parseInt(prompt("Enter a number: (0 to exit)"));
+           }
+           //console.log("Sum="+sum);   
+           let output=document.getElementById("output2");
+           output.innerHTML="The sum is "+sum;
+        }
+   
+        /*
+
+        5. Create a Javascript function called "sumOfNumbers2" to add up numbers entered by the user until the unser enters a number given as a parameter. Call the function from an HTML button and write the sum in an HTML paragraph.
+
+        */
+       function sumOfNumbers2(number)
+       {
+            sum2=0;
+            let number2 = parseInt(prompt("Enter a number: (2 to exit)"));
+            while(number2!=2)
+            {
+                sum2 += number2 //sum=sum+number
+                number2 = parseInt(prompt("Enter a number: (2 to exit)"));
+            }
+            //console.log("Sum="+sum);   
+            let output=document.getElementById("output3");
+            output.innerHTML="The sum is "+sum2;
+       }
+        /*
+
+        Write a Javascript function (use For loop) that computes
+        a. the sum of all even numbers between 1 and 100
+        b. the product of all odd numbers between 1 and 100
+        Call the function from a button and output the sum and the product 
+        in separate paragraphs
+        */
+        
+        function extra()
+        {
+            let sum3=0;
+           let product =1;
+           for(i=1;i<=100;i++)
+           {
+                if(i%2==0) //even number
+                {
+                    sum3=sum3+i;
+                    
+                }
+                else//odd
+                {
+                    product= product * i;
+                
+                }
+           }
+           //console.log("Sum:"+sum3);
+           //console.log("Product:"+product);
+           let output4 = document.getElementById("output4");
+           let output5 = document.getElementById("output5");
+           output4.innerHTML = "The sum of even numbers is " + sum3;
+            output5.innerHTML = "The product of odd numbers is " + product;
+        }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,234 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f8f8f8; 
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    color: #AFB18A;
+    font-size: 24px;
+    font-family: monospace;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0; 
+    margin-right: 0;
+    padding-left: 200px;
+    padding-right: 200px;
+    align-content: center;
+    max-width: 100%; 
+    background-color: #AFB18A;
+    margin-bottom: 0;
+    padding-bottom: 0px;
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item {
+    width: 100%;
+    height: 400px; /* Fixed height for each image */
+    object-fit: cover; /* Ensures images completely fill their area without distortion */
+    display: block;
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+}
+.description{
+    display: block;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    width: 100%;
+    align-items: center;
+    background-color: #AFB18A;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.About {
+    background-color: white;
+    color: #AFB18A;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    gap: 0; 
+    padding-right: 300px;
+    padding-left: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center; 
+    flex-wrap: wrap;
+    font-weight: bold;
+    
+}
+
+
+footer {
+    background-color:#AFB18A;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    display: flex;
+    gap: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer > img{
+    width: 600px;
+    
+}
+footer > span{
+    font-size: 30px;
+    font-weight: bolder;
+}
+footer>span>p{
+    font-size: 15px;
+}
+footer>span>ul{
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 100vw;
+        align-items: center;
+    }
+    .menu-item {
+        width: 140%;
+        height: 200px; 
+        object-fit: cover; 
+        display: block;
+        transition: transform 0.3s ease; 
+        align-items: center;
+    }
+
+    footer > img,  
+    footer > span > ul {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 20px;
+        gap: 0;
+    }
+
+    footer > span >p {
+        display: block; 
+    }
+    .About {
+        flex-direction: column; 
+        gap: 20px; 
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .About span p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 100vw;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .menu-item {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover; 
+        display: block;
+        transition: transform 0.3s ease; 
+        align-items: center;
+        
+    }
+    .About {
+        padding: 15px;
+    }
+
+    .About span p {
+        font-size: 16px; 
+    }
+   
+    footer > span > ul { 
+        display: none;
+    }
+    footer >img {
+        display: block;
+        width: 70vw;
+        margin: 0;
+    }
+
+    footer {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 10px;
+        gap: 0;
+    }
+
+    footer > span >p {
+        display: block; 
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.modal img {
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}

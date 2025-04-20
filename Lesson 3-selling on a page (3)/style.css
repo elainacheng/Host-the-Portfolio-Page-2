@@ -1,0 +1,27 @@
+body{
+    background-color: #f9feff;
+}
+
+#my1
+{
+    color: #233138;
+}
+#my1 em
+{
+    color:#5cccdb;
+
+}
+#my2
+{
+    color:#eb3750;padding: 2px;
+}
+#my3
+{color: #c0b68e;}
+#my4
+{background-color:#c0b68e ; border:6px solid #c3bebb ;}
+#my5
+{background-color: #c3bebb; border:6px solid #c0b68e;}
+#home, #details, #wiki{
+    border: 2px solid #233138;
+    padding: 8px;
+}

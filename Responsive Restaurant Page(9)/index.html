@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sugar & Whiskey</h1>
+    
+    </header>
+    
+    <main>
+        <section class="gallery">
+            <figure>
+            <img src="Bananas Foster.png" alt="Bananas Foster" class="menu-item" onclick="enlargeImage(this, 'Bananas Foster. These bananas cooked with a citrusy brown sugar-rum sauce and topped with crispy pecans.')">
+            </figure>
+            <figure>
+            <img src="Candied Almond Affogato.png" alt="Candied Almond Affogato" class="menu-item" onclick="enlargeImage(this, 'Candied Almond Affogato. Add almond liqueur to the mix for a little extra flair, and candied almonds and crushed amaretti cookies for some crunch.')">
+            </figure>
+            <figure>
+            <img src="Limoncello-Ricotta Cheesecake.png" alt="Limoncello-Ricotta Cheesecake" class="menu-item" onclick="enlargeImage(this, 'Limoncello-Ricotta Cheesecake. Limoncello — the sweet, potent Italian lemon liqueur made by steeping lemon peel in grain alcohol or vodka — is the star of this silky, creamy dessert.')">
+            </figure>
+            <figure>
+            <img src="Porter Bundt Cake with Whiskey-Caramel Sauce.png" alt="Porter Bundt Cake with Whiskey-Caramel Sauce" class="menu-item" onclick="enlargeImage(this, 'Porter Bundt Cake with Whiskey-Caramel Sauce. This richly flavored cake features quintessential Irish ingredients such as dark porter beer, dark brown sugar, and whiskey.')">
+            </figure>
+            <figure>
+            <img src="Spiced Pavlovas with Oranges and Mulled Wine Caramel.png" alt="Spiced Pavlovas with Oranges and Mulled Wine Caramel" class="menu-item" onclick="enlargeImage(this, 'Spiced Pavlovas with Oranges and Mulled Wine Caramel. A base of sweet, cinnamon-spiced meringue is topped with fresh, tangy quark and crowned with bright citrus and intense mulled wine caramel.')">
+            </figure>
+            <figure>
+            <img src="Sour Cherry Lambic Sorbet.png" alt="Sour Cherry Lambic Sorbet" class="menu-item" onclick="enlargeImage(this, ' Sour Cherry Lambic Sorbet. The sorbet with an old-fashioned style of Belgian beer called lambic, which is brewed with wild yeasts.')">
+            </figure>
+            
+        </section>
+        <section class="description">
+            <p>Click on images to get more information!</p>
+        </section>
+        
+        <section class="About">
+            <span>
+                <p style="font-size: 50px;font-weight: bolder;">About Us</p>
+            </span>
+            <span>
+                <p style="font-size:20px; line-height: 50px;">Welcome to Sugar & Whiskey, a dessert haven where indulgence meets creativity. We specialize in crafting unique, mouthwatering treats that pair the sweetness of desserts with a dash of boldness from whiskey and other rich flavors. From our signature Bananas Foster to the decadent Porter Bundt Cake with Whiskey-Caramel Sauce, each dish offers a delightful twist. Experience the perfect blend of flavors in every bite, whether it's our tangy Limoncello-Ricotta Cheesecake or the spiced Pavlovas with Mulled Wine Caramel. Sugar & Whiskey is here to elevate your sweet tooth with a touch of elegance and flair.</p>
+            </span>
+        </section>
+        
+        
+        <div id="image-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-text"></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <img src="Screenshot 2025-03-30 at 2.05.29 PM.png" alt="location pic" >
+        <span>Location & Contact
+        <ul>
+            <li>Monday:     10:00am~8:00pm</li>
+            <li>Tuesday:     10:00am~8:00pm</li>
+            <li>Wednesday:     10:00am~8:00pm</li>
+            <li>Thursday:     10:00am~8:00pm</li>
+            <li>Friday:     10:00am~8:00pm</li>
+            <li>Saturday:     10:00am~5:00pm</li>
+            <li>Sunday:     Closed</li>
+        </ul>
+        <p> No. 7, Section 5, Xinyi Road, Xinyi District, Taipei, Taiwan <br/>| Call us: (123) 456-7890</p>
+        <a href="../index.html" style="color: white;font-size: 20px;">Back to Portfolio</a>
+        </span>
+    </footer>
+</body>
+</html>

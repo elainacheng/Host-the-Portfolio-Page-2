@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Partner Lab 2</title>
+        <script src="partner2.js"></script>
+        <link rel="partner2stylesheet" href="partner2.css">
+    </head>
+    <header>
+        <h1 id="greeting">
+            Hello User!
+        </h1>
+        <p id="message">How are you today?</p>
+    </header>
+    <body>
+        <div class="customize">
+            <h2>Customize Your Page</h2>
+            <label for="nameInput">Enter your name:</label>
+            <input type="text" id="nameInput"><br/>
+            <label for="messageInput">Enter a brief message:</label>
+            <input type="text" id="messageInput"><br/>
+            <label for="bgColor">Choose the background color:</label>
+            <select id="bgColor">
+                <option value="white">White</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="lightgrey">Light Grey</option>
+                <option value="lightyellow">Light Yellow</option>
+                <option value="lightpink">Light Pink</option>
+            </select>
+            <button onclick="updatePage()">Update the page!</button>
+        </div>
+
+        <div class="todo">
+            <h2>To-Do List</h2>
+            <input type="text" id="todoInput">
+            <button onclick="addTodo()">Create the list</button>
+            <ol id="todoList"></ol>
+        </div>
+        <div>
+            <a href="../index.html">Back to the Portfolio</a>
+        </div>
+    </body>
+</html>

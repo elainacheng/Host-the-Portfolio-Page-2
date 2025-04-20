@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <header>
+            <h1>Lesson 5: In-Class Lab 2</h1>
+            <p>This is just a page demonstration.</p>
+        </header>
+        <script>
+         /*
+        1. You want to determine the cheapest option for living expenses in your third year of college.
+        The university charges $7500 per year.
+        Ask the user to enter the monthly rent of a 12-month lease in an outside apartment.
+        Print the cheapest option.
+        */   
+        let universityCost = 7500;
+        let monthlyRent = parseFloat(prompt("Enter the monthly rent for an outside apartment:"));
+        let annualRent = monthlyRent * 12;
+        if (annualRent < universityCost) {
+        console.log("The cheaper option is renting outside at $" + annualRent + " per year.");
+        } else {
+        console.log("The cheaper option is staying at the university for $7500 per year.");
+        }
+        /*
+        2. Write a Java program to request an IST course number from the user (140, 242, 261). Use a switch case statement to output the title of the course. Use default to tell the user the class is unknown.
+        */
+        let coursenumber=parseInt(prompt("What is your IST course number, 140, 242, or 261?"));
+        let category;
+        switch (parseInt(coursenumber))
+        {
+        case 140: category="Your class is IST 140"; break;
+        case 242: category="Your class is IST 242"; break;
+        case 261: category="Your class is IST 261"; break;
+        default: category="The class is unknown";
+        }
+        console.log(category)
+
+        //Loop
+            //for
+            for(i=0;i<=5;i++)//count up
+            {
+                console.log(i+1);
+            }
+
+            for(i=5;i>=0;i--)//count down
+            {
+                console.log(i+1);
+            }
+
+            //While
+            i=0;
+            while(i<=5)
+            {
+                console.log(i+1);
+                i=i+1;//i++
+            }
+        </script>
+    </body>
+</html>

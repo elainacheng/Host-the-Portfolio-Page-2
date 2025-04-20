@@ -1,0 +1,126 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e1e2f;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 90px 250px 250px 80px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar content1 content1"
+    "sidebar content2 content3"
+    "footer footer footer";
+  gap: 20px;
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #000;
+  align-items: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: linear-gradient(to bottom, #26d0ce, #1a2980);
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #000;
+}
+.sidebar > img{
+  width: 70%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.content1 {
+  grid-area: content1;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content1 img {
+  width: 100%;
+  max-width: 300px;
+  filter: brightness(1.2) grayscale(60%);
+  transition: filter 0.3s ease;
+  border-radius: 10px;
+}
+.content1 img:hover {
+  filter: contrast(130%) sepia(20%);
+}
+
+.content2,
+.content3 {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #000;
+  transition: transform 0.3s ease;
+}
+.content2> img{
+  width: 50%;
+  height: 90%;
+  border-radius: 10px;
+}
+.content3> img{
+  width: 50%;
+  height: 90%;
+  border-radius: 10px;
+}
+.content2:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.content3:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.content2 {
+  grid-area: content2;
+}
+
+.content3 {
+  grid-area: content3;
+}
+
+footer {
+  grid-area: footer;
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #000;
+}
+
+/* Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-title {
+  animation: fadeInSlide 1.5s ease-out;
+}

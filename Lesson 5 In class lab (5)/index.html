@@ -1,0 +1,61 @@
+<html lang="en">
+<body>
+<header>
+    <h1>Lesson 5 Demo</h1>
+<p>This is just a Javascript demonstration page.</p>
+<a href="../index.html">Back to Portfolio.</a>
+</header>
+<script>
+// 1. Print any 3 continents
+console.log("Asia");
+console.log("Europe");
+console.log("Africa");
+
+// 2. Print the four seasons using variables
+let winter = "Winter";
+let spring = "Spring";
+let summer = "Summer";
+let fall = "Fall";
+
+console.log(winter);
+console.log(spring);
+console.log(summer);
+console.log(fall);
+
+// 3. Ask the user for their favorite class and print it
+let favoriteClass = prompt("What is your favorite class?");
+console.log("Your favorite class is: " + favoriteClass);
+
+// 4. Ask the user for their first name and age, then print them
+let firstName = prompt("Enter your first name:");
+let age = prompt("Enter your age:");
+console.log("Your name is " + firstName);
+console.log("Your age is " + age);
+
+// 5. Prompt the user for two integers and print sum, difference, product, and average
+let num1 = parseInt(prompt("Enter the first integer:"));
+let num2 = parseInt(prompt("Enter the second integer:"));
+
+let sum = num1 + num2;
+let difference = num1 - num2;
+let product = num1 * num2;
+let average = sum / 2;
+
+console.log("Sum: " + sum);
+console.log("Difference: " + difference);
+console.log("Product: " + product);
+console.log("Average: " + average);
+
+// 6. Determine the cheapest living option
+let universityCost = 7500;
+let monthlyRent = parseFloat(prompt("Enter the monthly rent for an outside apartment:"));
+let annualRent = monthlyRent * 12;
+
+if (annualRent < universityCost) {
+    console.log("The cheaper option is renting outside at $" + annualRent + " per year.");
+} else {
+    console.log("The cheaper option is staying at the university for $7500 per year.");
+}
+</script>
+</body>
+</html>

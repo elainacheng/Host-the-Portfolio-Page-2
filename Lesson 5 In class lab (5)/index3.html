@@ -1,0 +1,97 @@
+<html>
+    <body>
+        <header>
+            <p style="font-size: 100px;">In Class Lab 3 Demonstration</p>
+        </header>
+
+        <script>
+
+            /*
+    
+            1. Write a Java program (use For loop) that computes
+    
+            a. the sum of all even numbers between 1 and 100
+    
+            b. the product of all odd numbers between 1 and 100
+    
+            */
+           let sum=0;
+           let product =1;
+           for(i=1;i<=100;i++)
+           {
+                if(i%2==0) //even number
+                {
+                    sum=sum+i;
+                }
+                else//odd
+                {
+                    product= product * i;
+                }
+           }
+           console.log("Sum:"+sum);
+           console.log("Product:"+product);
+    
+            /*
+    
+            2. Write a Java program (use While loop) that computes
+    
+            the sum of all numbers entered by the user until the user enters 0
+    
+            */
+           //HERE
+        
+           sum=0;
+           let number = parseInt(prompt("Enter a number: (0 to exit)"));
+           while(number!=0)
+           {
+             sum += number //sum=sum+number
+             number = parseInt(prompt("Enter a number: (0 to exit)"));
+           }
+           console.log("Sum="+sum);
+            /*
+            3. Write a java program to print the digits 0-9 each on a separate line. Indicate with an arrow those that are divisible by 3.
+                Example: 
+                0 <-
+                1
+                2
+                3 <-        
+                4
+                Use a while loop.
+            */
+           let num=0
+            while(num<=9)
+           {
+            if (num%3===0)
+           {
+            console.log(num+"<-");
+           }
+           else
+           {
+            console.log(num);
+           }
+           num++;
+           }
+            /*
+                 4. - Prompt Until a Match is Found -
+                Ask the user to enter an integer between 0 and 99
+                Initialize boolean flag to false
+                Test flag in while loop
+                Get input, and compare it to range
+                If input is in range, change flag to true
+                The loop will stop executing when flag is true
+            */
+            let flag = false;
+
+            while (!flag) {
+                let userInput = parseInt(prompt("Please enter an integer between 0 and 99:"));
+
+                if (userInput >= 0 && userInput <= 99) {
+                    flag = true; 
+                } else {
+                    alert("The number is out of range. Please try again.");
+                }
+            }
+
+            </script>
+    </body>
+</html>

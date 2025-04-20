@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="programs.js"></script>
+    </head>
+    <body>
+    <header>
+        <h1>Lesson 5 Demo</h1>
+    <p>This is just a Javascript demonstration page.</p>
+    </header>
+    <!--Problem 1-->
+    <p id="label">&nbsp;</p>
+    <select name="options" id="options">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <br/>
+    <br/>
+    <input type="button" value="Reset screen" onclick="resetScreen();">
+
+    <!--Problem 2-->
+    <p>Gender reveal</p>
+    <div id="genderBox" style="border-style: solid;border-width: 1px;border-color: black;">
+        <p id="genderLabel">&nbsp;</p>
+    </div>
+    <br/>
+    <input type="button" value="Reveal" onclick="revealGender();">
+    <br/>
+
+    <!--Problem 3-->
+    <label for="colorInput">Enter a color (With no spaces between):</label>
+    <input type="text" id="colorInput">
+    <button onclick="showColor()">Show Color</button>
+    <div id="colorBox" style="border-style: solid;border-width: 1px;border-color: black;">
+        <p id="colorEntered">&nbsp;</p>
+    </div>
+    </body>
+</html>
